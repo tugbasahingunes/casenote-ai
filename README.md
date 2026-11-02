@@ -93,6 +93,6 @@ casenote-ai/
 
 **Tuğba Güneş** — social policy and family services specialist with 10+ years of experience in social research and data-driven policy. Building AI tools grounded in how social care actually works.
 
-[LinkedIn](https://www.linkedin.com/in/tuğba-güneş-648925260)
+[LinkedIn](https://www.linkedin.com/public-profile/settings/?trk=d_flagship3_profile_self_view_public_profile&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BBTsAsmnaSraMRoqpLEvNYQ%3D%3D)
 
 *Developed with AI assistance. Domain criteria, case design and evaluation labels are the author's own.*
