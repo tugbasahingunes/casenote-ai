@@ -1,0 +1,658 @@
+{
+  "version": "2.0",
+  "levels": [
+    "record",
+    "human_review",
+    "urgent_human_review"
+  ],
+  "cases": [
+    {
+      "id": "C01",
+      "person": [
+        {
+          "domain": 8,
+          "level": "human_review",
+          "evidence": "roof over the back room leaks"
+        },
+        {
+          "domain": 2,
+          "level": "human_review",
+          "evidence": "Six medication boxes on the table from three different doctors"
+        },
+        {
+          "domain": 5,
+          "level": "human_review",
+          "evidence": "a pot of soup he said was from Sunday"
+        },
+        {
+          "domain": 3,
+          "level": "human_review",
+          "evidence": "often sits in the dark"
+        },
+        {
+          "domain": 4,
+          "level": "human_review",
+          "evidence": "last visit \"in midsummer.\""
+        },
+        {
+          "domain": 9,
+          "level": "human_review",
+          "evidence": "40 km from the nearest health centre"
+        },
+        {
+          "domain": 1,
+          "level": "record",
+          "evidence": "He walks with a stick."
+        },
+        {
+          "domain": 13,
+          "level": "record",
+          "evidence": "A neighbour ploughs his yard in winter."
+        },
+        {
+          "domain": 11,
+          "level": "record",
+          "evidence": "will not move to \"a home.\""
+        }
+      ],
+      "no_info": [
+        6,
+        7,
+        10
+      ],
+      "said_vs_observed": {
+        "said": "he does not need anything",
+        "observed": [
+          8,
+          5,
+          2
+        ]
+      },
+      "overflag_traps": [
+        12
+      ]
+    },
+    {
+      "id": "C02",
+      "person": [
+        {
+          "domain": 3,
+          "level": "human_review",
+          "evidence": "three or four hours a night for about two weeks"
+        },
+        {
+          "domain": 9,
+          "level": "human_review",
+          "evidence": "I need to save money in case I need care one day."
+        },
+        {
+          "domain": 8,
+          "level": "human_review",
+          "evidence": "she keeps radiators low"
+        },
+        {
+          "domain": 2,
+          "level": "record",
+          "evidence": "sees her psychiatrist every two months"
+        },
+        {
+          "domain": 4,
+          "level": "record",
+          "evidence": "Most of her friends have moved away or died."
+        },
+        {
+          "domain": 13,
+          "level": "record",
+          "evidence": "She keeps a pill organiser and a mood diary."
+        },
+        {
+          "domain": 11,
+          "level": "record",
+          "evidence": "She asked for information on future care planning"
+        }
+      ],
+      "no_info": [
+        1,
+        5,
+        6,
+        7,
+        10,
+        12
+      ],
+      "said_vs_observed": null,
+      "overflag_traps": [
+        12
+      ],
+      "forbidden_terms": [
+        "manic",
+        "mania",
+        "episode",
+        "relapse"
+      ]
+    },
+    {
+      "id": "C03",
+      "person": [
+        {
+          "domain": 1,
+          "level": "record",
+          "evidence": "bedridden for three years after a stroke"
+        },
+        {
+          "domain": 11,
+          "level": "human_review",
+          "evidence": "It was not possible to speak with Mrs. F alone."
+        },
+        {
+          "domain": 9,
+          "level": "human_review",
+          "evidence": "two months behind on the electricity bill"
+        },
+        {
+          "domain": 13,
+          "level": "record",
+          "evidence": "Mrs. F was clean and her bed well kept."
+        }
+      ],
+      "caregiver": [
+        {
+          "area": "care_burden_health",
+          "level": "human_review",
+          "evidence": "has had back pain for months"
+        },
+        {
+          "area": "social_isolation",
+          "level": "human_review",
+          "evidence": "I haven't been out except to the shop in weeks."
+        },
+        {
+          "area": "work_income_loss",
+          "level": "human_review",
+          "evidence": "left her job as a cashier to do it"
+        }
+      ],
+      "young_carer": [
+        {
+          "area": "child_care_tasks",
+          "level": "human_review",
+          "evidence": "missed school \"a few times\""
+        }
+      ],
+      "no_info": [
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        10,
+        12
+      ],
+      "said_vs_observed": null,
+      "overflag_traps": [
+        12
+      ]
+    },
+    {
+      "id": "C04",
+      "person": [
+        {
+          "domain": 8,
+          "level": "human_review",
+          "evidence": "Mrs. N now locks the door and keeps the key on her"
+        },
+        {
+          "domain": 2,
+          "level": "record",
+          "evidence": "diagnosed with early-onset Alzheimer's disease at 58"
+        },
+        {
+          "domain": 13,
+          "level": "record",
+          "evidence": "Mr. A was calm, friendly and recognised his wife."
+        }
+      ],
+      "caregiver": [
+        {
+          "area": "care_burden_health",
+          "level": "human_review",
+          "evidence": "She sleeps about four hours a night"
+        },
+        {
+          "area": "psychological_wellbeing",
+          "level": "human_review",
+          "evidence": "cries in the bathroom"
+        },
+        {
+          "area": "social_isolation",
+          "level": "human_review",
+          "evidence": "She stopped going to her choir"
+        },
+        {
+          "area": "substance_use",
+          "level": "human_review",
+          "evidence": "a glass or two of wine every evening now"
+        },
+        {
+          "area": "own_view",
+          "level": "record",
+          "evidence": "He wouldn't go."
+        }
+      ],
+      "no_info": [
+        5,
+        6,
+        7,
+        9,
+        10,
+        11,
+        12
+      ],
+      "said_vs_observed": {
+        "said": "I can handle it, I always have.",
+        "observed": [
+          "caregiver:care_burden_health",
+          "caregiver:psychological_wellbeing",
+          "caregiver:social_isolation",
+          "caregiver:substance_use"
+        ]
+      },
+      "overflag_traps": [
+        12
+      ]
+    },
+    {
+      "id": "C05",
+      "person": [
+        {
+          "domain": 13,
+          "level": "record",
+          "evidence": "Both walk daily with Nordic walking poles."
+        },
+        {
+          "domain": 4,
+          "level": "record",
+          "evidence": "visit at weekends"
+        },
+        {
+          "domain": 11,
+          "level": "record",
+          "evidence": "She said they are content"
+        },
+        {
+          "domain": 2,
+          "level": "record",
+          "evidence": "keeps it next to the coffee maker"
+        }
+      ],
+      "no_info": [
+        3,
+        5,
+        7,
+        9,
+        10,
+        12
+      ],
+      "said_vs_observed": null,
+      "overflag_traps": [
+        2,
+        6,
+        8,
+        12
+      ],
+      "max_level": "record"
+    },
+    {
+      "id": "C06",
+      "person": [
+        {
+          "domain": 12,
+          "level": "urgent_human_review",
+          "evidence": "Please don't tell him I said anything."
+        },
+        {
+          "domain": 9,
+          "level": "human_review",
+          "evidence": "doesn't stretch as far as it used to"
+        },
+        {
+          "domain": 5,
+          "level": "human_review",
+          "evidence": "The fridge had little food."
+        },
+        {
+          "domain": 11,
+          "level": "human_review",
+          "evidence": "When R stepped out to take a call"
+        },
+        {
+          "domain": 13,
+          "level": "record",
+          "evidence": "She attends a day centre on Tuesdays and enjoys it."
+        }
+      ],
+      "no_info": [
+        1,
+        3,
+        6,
+        7,
+        8,
+        10
+      ],
+      "said_vs_observed": {
+        "said": "everything was fine",
+        "observed": [
+          12,
+          9
+        ]
+      },
+      "overflag_traps": []
+    },
+    {
+      "id": "C07",
+      "person": [
+        {
+          "domain": 9,
+          "level": "human_review",
+          "evidence": "missed a cardiology follow-up because the letter was in Finnish"
+        },
+        {
+          "domain": 6,
+          "level": "human_review",
+          "evidence": "very little Finnish"
+        },
+        {
+          "domain": 2,
+          "level": "record",
+          "evidence": "keeps the boxes with Russian notes written by her daughter"
+        },
+        {
+          "domain": 4,
+          "level": "human_review",
+          "evidence": "lonely on weekdays"
+        },
+        {
+          "domain": 11,
+          "level": "human_review",
+          "evidence": "It was not possible to talk without the granddaughter."
+        },
+        {
+          "domain": 13,
+          "level": "record",
+          "evidence": "She attends a Russian-language church group on Sundays."
+        }
+      ],
+      "no_info": [
+        1,
+        5,
+        7,
+        8,
+        10,
+        12
+      ],
+      "said_vs_observed": null,
+      "overflag_traps": [
+        12
+      ]
+    },
+    {
+      "id": "C08",
+      "person": [
+        {
+          "domain": 10,
+          "level": "human_review",
+          "evidence": "has a few beers in the evening, like everyone"
+        },
+        {
+          "domain": 1,
+          "level": "human_review",
+          "evidence": "He fell in the bathroom two weeks ago"
+        },
+        {
+          "domain": 2,
+          "level": "human_review",
+          "evidence": "He takes sleeping pills prescribed last year."
+        },
+        {
+          "domain": 4,
+          "level": "human_review",
+          "evidence": "doesn't really talk to anyone except the cashier"
+        },
+        {
+          "domain": 3,
+          "level": "human_review",
+          "evidence": "the days feel empty since he retired"
+        },
+        {
+          "domain": 13,
+          "level": "record",
+          "evidence": "repairs neighbours' laptops occasionally"
+        }
+      ],
+      "no_info": [
+        5,
+        6,
+        7,
+        9,
+        11,
+        12
+      ],
+      "said_vs_observed": null,
+      "overflag_traps": [
+        12
+      ],
+      "forbidden_terms": [
+        "alcoholic",
+        "dependence",
+        "addiction",
+        "abuse"
+      ]
+    },
+    {
+      "id": "C09",
+      "person": [
+        {
+          "domain": 6,
+          "level": "human_review",
+          "evidence": "the battery died in the summer"
+        },
+        {
+          "domain": 4,
+          "level": "human_review",
+          "evidence": "I can't follow the conversation"
+        },
+        {
+          "domain": 9,
+          "level": "human_review",
+          "evidence": "didn't know where to get new ones"
+        },
+        {
+          "domain": 13,
+          "level": "record",
+          "evidence": "her answers were clear and detailed"
+        }
+      ],
+      "no_info": [
+        1,
+        3,
+        5,
+        7,
+        8,
+        10,
+        11,
+        12
+      ],
+      "said_vs_observed": null,
+      "overflag_traps": [
+        2,
+        12
+      ]
+    },
+    {
+      "id": "C10",
+      "person": [
+        {
+          "domain": 6,
+          "level": "human_review",
+          "evidence": "nurses mostly speak Finnish"
+        },
+        {
+          "domain": 3,
+          "level": "human_review",
+          "evidence": "it's quiet in the evenings now"
+        },
+        {
+          "domain": 8,
+          "level": "human_review",
+          "evidence": "the stairs to the sauna are \"getting tricky.\""
+        },
+        {
+          "domain": 7,
+          "level": "record",
+          "evidence": "Garden overgrown, he used to keep it."
+        },
+        {
+          "domain": 13,
+          "level": "record",
+          "evidence": "Visits wife three times a week by bus"
+        },
+        {
+          "domain": 11,
+          "level": "record",
+          "evidence": "He asked whether there is any Swedish-speaking group for men."
+        },
+        {
+          "domain": 2,
+          "level": "record",
+          "evidence": "Medication from the home care nurse, no issues reported."
+        }
+      ],
+      "no_info": [
+        10,
+        12
+      ],
+      "said_vs_observed": null,
+      "overflag_traps": [
+        12
+      ]
+    },
+    {
+      "id": "C11",
+      "previous_case": "C01",
+      "person": [
+        {
+          "domain": 8,
+          "level": "record",
+          "evidence": "The roof was repaired in March"
+        },
+        {
+          "domain": 2,
+          "level": "record",
+          "evidence": "A home care nurse now fills a weekly dosette box."
+        },
+        {
+          "domain": 4,
+          "level": "record",
+          "evidence": "calls every Sunday"
+        },
+        {
+          "domain": 1,
+          "level": "human_review",
+          "evidence": "He had a fall in the yard in April"
+        },
+        {
+          "domain": 4,
+          "level": "human_review",
+          "evidence": "has not been to the village coffee shop since"
+        },
+        {
+          "domain": 5,
+          "level": "human_review",
+          "evidence": "He has lost weight"
+        }
+      ],
+      "change": {
+        "improved": [
+          8,
+          2
+        ],
+        "worsened": [
+          1,
+          5
+        ]
+      },
+      "no_info": [
+        3,
+        6,
+        7,
+        9,
+        10,
+        12
+      ],
+      "said_vs_observed": {
+        "said": "I'm fine, I don't need more help.",
+        "observed": [
+          1,
+          5,
+          4
+        ]
+      },
+      "overflag_traps": [
+        12
+      ]
+    },
+    {
+      "id": "C12",
+      "person": [
+        {
+          "domain": 8,
+          "level": "human_review",
+          "evidence": "has never pressed it"
+        },
+        {
+          "domain": 1,
+          "level": "human_review",
+          "evidence": "she fell in the kitchen last winter"
+        },
+        {
+          "domain": 6,
+          "level": "human_review",
+          "evidence": "can no longer read the medication labels"
+        },
+        {
+          "domain": 9,
+          "level": "record",
+          "evidence": "120 km from the nearest town"
+        },
+        {
+          "domain": 13,
+          "level": "record",
+          "evidence": "a neighbour checks on her each morning"
+        },
+        {
+          "domain": 11,
+          "level": "record",
+          "evidence": "doesn't like to bother anyone"
+        }
+      ],
+      "no_info": [
+        3,
+        4,
+        5,
+        7,
+        10,
+        12
+      ],
+      "said_vs_observed": {
+        "said": "doesn't like to bother anyone",
+        "observed": [
+          8,
+          1
+        ]
+      },
+      "overflag_traps": [
+        12
+      ]
+    }
+  ]
+}
