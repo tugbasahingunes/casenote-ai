@@ -2,7 +2,7 @@
 
 **Evidence-based, expert-defined AI support for social care home-visit documentation.**
 
-> **Status: Phase 1 — design and evaluation dataset.** Criteria, ethics framework and synthetic test cases are published first. Code and evaluation results will follow.
+> **Status: Phase 2 — prototype and evaluation harness.** Criteria, ethics framework, 12 labelled synthetic cases, the analysis code and the evaluation script are published. A keyword baseline has been scored; LLM results are next.
 
 ---
 
@@ -54,6 +54,10 @@ It never diagnoses, scores people, or decides eligibility for services. Every ou
 - **Strengths-based output.** Resources and coping strategies are recorded alongside risks.
 - **Context-adaptable.** Criteria live in a separate file, so the system can be adapted to another country's framework without changing the code.
 
+## First results
+
+A naive keyword baseline (no AI) misses **24%** of expert-flagged concerns, including every family-carer signal, and raises **11 harmful over-flags**, six of them in a case where nothing was wrong. It detects **none** of the said-vs-observed contradictions. This is the bar an AI system has to beat on both kinds of error at once. See [`eval/README.md`](eval/README.md).
+
 ## Ethics and compliance
 
 - **Synthetic data only.** No real case, client or institutional data is used.
@@ -69,13 +73,20 @@ See [`docs/ethics.md`](docs/ethics.md) for the full framework and a draft data p
 ```
 casenote-ai/
 ├── README.md
+├── config/
+│   └── criteria_fi_older_people.json   # machine-readable criteria (swap to adapt)
 ├── docs/
 │   ├── criteria.md          # 13 assessment domains and flagging rules
 │   └── ethics.md            # ethics, EU AI Act, GDPR, DPIA draft
 ├── data/
 │   └── synthetic_cases/     # 12 synthetic notes + expert gold labels
-├── src/                     # (coming) application code
-└── eval/                    # (coming) evaluation scripts and results
+├── src/
+│   ├── casenote.py          # note → evidence-quoted flags (LLM + quote check)
+│   ├── run_cases.py         # run all cases
+│   └── baseline_keywords.py # naive baseline, no AI
+└── eval/
+    ├── evaluate.py          # missed signals, harmful over-flagging, coverage gaps
+    └── results/             # predictions and reports
 ```
 
 ## Roadmap
@@ -84,8 +95,10 @@ casenote-ai/
 - [x] Ethics and compliance framework
 - [x] 12 synthetic cases with expert labels (v2)
 - [ ] 20 synthetic cases
-- [ ] Prototype: note → structured flags (Python + LLM API)
-- [ ] Evaluation: missed signals, harmful over-flagging, coverage gaps
+- [x] Prototype: note → structured flags (Python + LLM API)
+- [x] Evaluation script: missed signals, harmful over-flagging, coverage gaps
+- [x] Keyword baseline scored ([results](eval/README.md))
+- [ ] LLM evaluation results
 - [ ] Simple interface and demo video
 - [ ] Review by practising social care professionals
 
@@ -93,6 +106,6 @@ casenote-ai/
 
 **Tuğba Güneş** — social policy and family services specialist with 10+ years of experience in social research and data-driven policy. Building AI tools grounded in how social care actually works.
 
-[LinkedIn](https://www.linkedin.com/public-profile/settings/?trk=d_flagship3_profile_self_view_public_profile&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BBTsAsmnaSraMRoqpLEvNYQ%3D%3D)
+[LinkedIn](https://www.linkedin.com/in/tu%C4%9Fba-g-648925260)
 
 *Developed with AI assistance. Domain criteria, case design and evaluation labels are the author's own.*

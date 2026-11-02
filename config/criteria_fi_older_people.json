@@ -1,0 +1,50 @@
+{
+  "name": "Older people living at home — Finland",
+  "version": "1.0",
+  "source": "docs/criteria.md",
+  "domains": {
+    "1": {"name": "Physical function and mobility", "signals": "falls, difficulty walking or with stairs, unable to get out of bed, help needed with washing or dressing, new pain"},
+    "2": {"name": "Cognition and medication management", "signals": "forgetfulness, confusion about time or place, getting lost, forgetting or mixing up medication, medication not reviewed, difficulty making decisions"},
+    "3": {"name": "Psychological wellbeing and life events", "signals": "feeling low or hopeless, loss of interest, anxiety, grief, recent bereavement, move or hospital discharge, marked change in sleep or energy"},
+    "4": {"name": "Social functioning and relationships", "signals": "living alone, reduced contact with others, loneliness, relationship problems"},
+    "5": {"name": "Vitality and nutrition", "signals": "appetite loss, unintended weight loss, empty fridge, old food, low fluid intake"},
+    "6": {"name": "Sensory function and communication", "signals": "difficulty seeing or hearing, unused aids, language barrier, interpreter needed, unable to use the phone"},
+    "7": {"name": "Daily living and household tasks", "signals": "difficulty shopping, cooking, cleaning, gardening or managing money"},
+    "8": {"name": "Living environment and safety", "signals": "accessibility, heating problems, damp or mould, fire or accident risk, leaving home at night, locked doors, safety alarm not used"},
+    "9": {"name": "Service access and financial conditions", "signals": "unaware of services, distance and transport, digital exclusion, unpaid bills, financial strain"},
+    "10": {"name": "Substance use", "signals": "observation or statement about alcohol or medication use"},
+    "11": {"name": "The person's own view and preferences", "signals": "what the person wants or refuses, needs in their own words, whether their view could be obtained independently"},
+    "12": {"name": "Suspected neglect, abuse or self-neglect", "signals": "unexplained injury, a relative controlling the person or their money, fear of a relative, money or property taken, papers signed without understanding"},
+    "13": {"name": "Strengths and resources", "signals": "what the person can do, supportive people, hobbies, neighbours, coping strategies, routines"}
+  },
+  "caregiver_areas": {
+    "care_burden_health": "physical strain, sleep loss, own health affected by caring",
+    "psychological_wellbeing": "distress, crying, exhaustion",
+    "social_isolation": "stopped activities, rarely leaves home",
+    "work_income_loss": "left or reduced work to care",
+    "substance_use": "alcohol or medication used to cope",
+    "own_view": "carer's stated wishes or refusals"
+  },
+  "young_carer_areas": {
+    "child_care_tasks": "a child or adolescent carrying personal care tasks or missing school"
+  },
+  "levels": {
+    "record": "information for the case record; no further action may be needed",
+    "human_review": "a possible change or need for support that a professional should assess",
+    "urgent_human_review": "domain 12 signals, or situations that immediately affect the person's safety"
+  },
+  "rules": [
+    "Every flag must include an exact quote copied word for word from the note. No quote, no flag.",
+    "Do not infer facts that are not in the note.",
+    "Never use diagnostic labels of your own (for example dementia, depression, mania, alcoholic, dependence). A diagnosis the person or a relative reported may be quoted as reported.",
+    "Never give people scores or rank them.",
+    "Domain 12 is for concrete signals in the note. Self-neglect or neglect is a professional judgement: do not flag 12 only because needs are unmet.",
+    "A protective measure (such as a locked door) belongs to domain 8 unless the note shows harm or control.",
+    "Hearing or language difficulties are not evidence of cognitive decline.",
+    "Ordinary age-related details (reading glasses, forgetting names occasionally) should not be raised above record level.",
+    "List domains with no information in the note as no_info.",
+    "When the person's statement conflicts with observations, report both in said_vs_observed.",
+    "Flag a family carer's situation separately under caregiver, and a child carer under young_carer.",
+    "If the person's view was obtained only through a relative or interpreter, flag domain 11 at human_review."
+  ]
+}
