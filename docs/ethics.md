@@ -67,6 +67,7 @@ The system never:
 | Legal basis (indicative) | GDPR Art. 6(1)(e) public task; Art. 9(2)(h) health or social care |
 | Automated decision-making | None. No decision or legal effect results from the output without professional review |
 | Key risks | (1) Hallucinated or misquoted evidence; (2) missed signals, especially abuse; (3) over-flagging that stigmatises families or carers; (4) bias across language or cultural groups; (5) automation bias in reviewers; (6) data leaving the EU through an external model provider |
+| Model providers in this project | Development uses only synthetic data. Free API tiers may allow the provider to use inputs to improve its products, which is acceptable for synthetic notes but not for real ones. A real deployment would need a paid or EU-hosted tier with no training on client data and a data processing agreement |
 | Mitigations | (1) Verbatim quote check against the note; (2) separate "missed signal" metric, with domain 12 weighted most heavily; (3) separate "harmful over-flagging" metric and over-flag traps in the test set; (4) group-wise evaluation; (5) no scores, evidence shown next to every flag, drafts only; (6) EU-hosted model or on-premise deployment, no training on client data, no retention |
 | Residual risk | Medium. Acceptable only with practitioner validation, a pilot under supervision, and ongoing monitoring of both error types |
 | Status | Draft for portfolio purposes. Not reviewed by a data protection officer |

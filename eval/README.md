@@ -23,7 +23,8 @@ Missing a risk and wrongly flagging a family are different harms, so they are re
 | System | Missed signals | Harmful over-flagging | Said vs. observed | Report |
 | --- | --- | --- | --- | --- |
 | Keyword baseline (no AI) | 11 of 45 (24%) | 11 | 0 of 5 | [report](results/report_keyword-baseline.md) |
-| LLM (Claude) | *coming* | | | |
+| Gemini | *coming* | | | |
+| Claude | *coming* | | | |
 
 The keyword baseline sets the bar. It misses every family carer and young carer signal, raises six false alarms in the clean case (C05), flags hearing loss as cognitive decline (C09) and never detects a said-vs-observed contradiction. An AI system is only useful if it beats this on both kinds of error at once.
 
@@ -35,11 +36,15 @@ The keyword baseline sets the bar. It misses every family carer and young carer 
 
 ## Run
 
+The easiest way is the [Colab notebook](../notebooks/run_in_colab.ipynb): no installation, and the API key stays in Colab secrets.
+
+Locally:
+
 ```bash
 python src/baseline_keywords.py
 python eval/evaluate.py eval/results/predictions_keyword-baseline.json
 
-export ANTHROPIC_API_KEY=...        # never commit your key
-python src/run_cases.py
-python eval/evaluate.py eval/results/predictions_claude-sonnet-5-5.json
+export GEMINI_API_KEY=...           # never commit your key
+CASENOTE_PROVIDER=gemini python src/run_cases.py
+python eval/evaluate.py eval/results/predictions_gemini-3.8-flash.json
 ```

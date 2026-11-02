@@ -2,6 +2,8 @@
 
 **Evidence-based, expert-defined AI support for social care home-visit documentation.**
 
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tugbasahingunes/casenote-ai/blob/main/notebooks/run_in_colab.ipynb)
+
 > **Status: Phase 2 — prototype and evaluation harness.** Criteria, ethics framework, 12 labelled synthetic cases, the analysis code and the evaluation script are published. A keyword baseline has been scored; LLM results are next.
 
 ---
@@ -80,8 +82,10 @@ casenote-ai/
 │   └── ethics.md            # ethics, EU AI Act, GDPR, DPIA draft
 ├── data/
 │   └── synthetic_cases/     # 12 synthetic notes + expert gold labels
+├── notebooks/
+│   └── run_in_colab.ipynb   # run the evaluation in the browser
 ├── src/
-│   ├── casenote.py          # note → evidence-quoted flags (LLM + quote check)
+│   ├── casenote.py          # note → evidence-quoted flags (Claude or Gemini + quote check)
 │   ├── run_cases.py         # run all cases
 │   └── baseline_keywords.py # naive baseline, no AI
 └── eval/
