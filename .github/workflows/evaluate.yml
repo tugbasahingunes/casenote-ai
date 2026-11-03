@@ -1,0 +1,44 @@
+name: Run evaluation
+
+on:
+  workflow_dispatch:
+    inputs:
+      provider:
+        description: "Model provider (gemini or anthropic)"
+        default: "gemini"
+      model:
+        description: "Model name"
+        default: "gemini-3.1-flash-lite"
+
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run all 12 cases
+        env:
+          CASENOTE_PROVIDER: ${{ github.event.inputs.provider }}
+          CASENOTE_MODEL: ${{ github.event.inputs.model }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python -u src/run_cases.py
+
+      - name: Score against expert labels
+        run: python eval/evaluate.py "eval/results/predictions_${{ github.event.inputs.model }}.json" | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        with:
+          name: results-${{ github.event.inputs.model }}
+          path: |
+            eval/results/predictions_${{ github.event.inputs.model }}.json
+            eval/results/report_${{ github.event.inputs.model }}.md
