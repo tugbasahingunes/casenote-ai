@@ -22,7 +22,7 @@ The criteria come from three layers:
 | Act 565/2020 §15a | Finnish law | RAI is mandatory when assessing older people who need regular social services ([Finlex](https://finlex.fi/api/media/statute/26315/mainPdf/main.pdf)). Shows that a standard framework exists; its items are not used. |
 | WHO ICF | International framework | Defines functioning as body functions, activities and participation, with environmental factors as barriers or facilitators ([WHO/CDC](https://cdc.gov/nchs/media/pdfs/2024/06/icfoverview_finalforwho10sept.pdf)). Activity areas include communication, mobility, self-care, domestic life and interpersonal relationships ([PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC4467232/table/T0001)). |
 | WHO ICOPE | International framework | Defines intrinsic capacity as locomotion, cognition, psychological wellbeing, vitality and sensory capacity, within a social and physical environment ([PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8993034)). Vitality screening looks for appetite loss and unintended weight loss ([IJCH](https://www.iapsmupuk.org/journal/index.php/IJCH/article/download/3470/1819/21787)). |
-| University of Lapland study | Finnish practice research | Assessments emphasise physical and cognitive areas; social and psychological areas receive less attention; substance use and relationship problems are overlooked ([Lauda](https://lauda.ulapland.fi/bitstream/10024/61474/2/Kortelainen.Riinaa.pdf)). These areas are therefore flagged explicitly. |
+| Alatalo et al. 2014 (joint master's thesis, University of Lapland and Oulu UAS) | Finnish practice research | Assessments emphasised physical and cognitive functioning; social and psychological functioning received less attention; dependencies and relationship problems were overlooked ([Lauda](https://lauda.ulapland.fi/bitstream/10024/61474/2/Kortelainen.Riinaa.pdf)). These areas are therefore flagged explicitly. |
 
 ## Domains
 
@@ -33,13 +33,13 @@ The first four domains come directly from the Act. The others draw on the WHO fr
 | 1 | Physical function and mobility | Falls, difficulty walking or with stairs, unable to get out of bed, help needed with washing or dressing, new pain | §15 physical; ICOPE locomotion; ICF mobility and self-care |
 | 2 | Cognition and medication management | Forgetfulness, confusion about time or place, getting lost, forgetting or mixing up medication, medication list not reviewed for a long time, difficulty making decisions | §15 cognitive; ICOPE cognition; research on medication safety in family care |
 | 3 | Psychological wellbeing and life events | Feeling low or hopeless, loss of interest, anxiety, grief; recent bereavement, move, or discharge from hospital | §15 psychological; ICOPE psychological domain; Eastern Uusimaa preventive-visit study |
-| 4 | Social functioning and relationships | Living alone, reduced contact with others, relationship problems, exhausted family carer | §15 social; ICF interpersonal relationships; Lapland study |
+| 4 | Social functioning and relationships | Living alone, reduced contact with others, relationship problems, exhausted family carer | §15 social; ICF interpersonal relationships; Alatalo et al. 2014 |
 | 5 | Vitality and nutrition | Appetite loss, unintended weight loss, empty fridge, low fluid intake | ICOPE vitality |
 | 6 | Sensory function and communication | Difficulty seeing or hearing, unable to use the phone, language barrier, breakdown in communication | ICOPE sensory capacity; ICF communication; Turku study showing this area is recorded less with age |
 | 7 | Daily living and household tasks | Difficulty shopping, cooking, cleaning or managing money | ICF domestic life |
 | 8 | Living environment and safety | Accessibility of the home, heating problems, fire or accident risk, leaving the home at night | §15 environment; ICF environmental factors; Turku study |
 | 9 | Service access and financial conditions | Unaware of services, transport difficulties, digital exclusion, unpaid bills | §15 environment; ICF environmental factors |
-| 10 | Substance use | Observation or statement about alcohol or medication use | Lapland study (overlooked area) |
+| 10 | Substance use | Observation or statement about alcohol or medication use | Alatalo et al. 2014 (dependencies overlooked) |
 | 11 | The person's own view and preferences | What the person wants and does not want; needs in their own words; whether their view could be obtained | §15 joint assessment; Puustinen et al. 2020 |
 | 12 | Suspected neglect, abuse or self-neglect | Unable to look after oneself, unexplained injury, a relative controlling the person, money being taken | §25 duty to notify |
 | 13 | Strengths and resources | What the person can do independently, supportive relatives, hobbies, neighbours, coping strategies | Turku study (recognising individual resources) |
@@ -94,7 +94,7 @@ This version is deliberately narrow.
 - [ICF components table (PMC)](https://pmc.ncbi.nlm.nih.gov/articles/PMC4467232/table/T0001)
 - [Leung et al.: ICOPE intrinsic capacity (PMC)](https://pmc.ncbi.nlm.nih.gov/articles/PMC8993034)
 - [Chamoli et al.: ICOPE screening domains (IJCH)](https://www.iapsmupuk.org/journal/index.php/IJCH/article/download/3470/1819/21787)
-- [Kortelainen: assessing older people's service needs (University of Lapland)](https://lauda.ulapland.fi/bitstream/10024/61474/2/Kortelainen.Riinaa.pdf)
+- [Alatalo, Ilvesluoto, Joona, Koistinaho, Kortelainen, Penttilä-Sirkka, Vääräniemi 2014: comprehensive service needs assessment (joint master's thesis, University of Lapland and Oulu UAS)](https://lauda.ulapland.fi/bitstream/10024/61474/2/Kortelainen.Riinaa.pdf)
 - [Puustinen, Kangasniemi, Turjamaa 2020: home care plans](https://www.utupub.fi/handle/11111/49548)
 - [University of Turku: individual resources and home care tasks](https://www.utupub.fi/handle/11111/44256)
 - [Salminen 2021: psychological wellbeing in care plans](https://www.theseus.fi/handle/10024/494861)

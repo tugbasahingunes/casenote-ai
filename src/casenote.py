@@ -171,15 +171,28 @@ def _call_gemini(note, criteria, model, client=None):
     system = build_system_prompt(criteria).replace(
         "Return your answer only by calling the record_flags tool.",
         "Return your answer only as JSON matching the given schema.")
-    response = client.models.generate_content(
-        model=model,
-        contents=f"Home-visit note:\n\n{note}",
-        config=types.GenerateContentConfig(
-            system_instruction=system,
-            response_mime_type="application/json",
-            response_json_schema=_gemini_schema(output_schema(criteria)),
-        ),
+    config = dict(
+        system_instruction=system,
+        response_mime_type="application/json",
+        response_json_schema=_gemini_schema(output_schema(criteria)),
     )
+    thinking = os.environ.get("CASENOTE_THINKING", "low")  # low = faster
+    try:
+        response = client.models.generate_content(
+            model=model,
+            contents=f"Home-visit note:\n\n{note}",
+            config=types.GenerateContentConfig(
+                **config, thinking_config=types.ThinkingConfig(thinking_level=thinking)),
+        )
+    except genai.errors.ClientError as e:
+        if getattr(e, "code", None) != 400:
+            raise
+        # Model does not accept a thinking level: retry with defaults.
+        response = client.models.generate_content(
+            model=model,
+            contents=f"Home-visit note:\n\n{note}",
+            config=types.GenerateContentConfig(**config),
+        )
     return json.loads(response.text)
 
 

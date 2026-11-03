@@ -33,7 +33,10 @@ ESCALATE = {8, 12}
 
 
 def sentences(note):
-    return [s.strip() for s in re.split(r"(?<=[.!?])\s+", note) if s.strip()]
+    # Do not split after titles such as "Mr." or "Mrs."
+    protected = re.sub(r"\b(Mr|Mrs|Ms|Dr)\.", r"\1<DOT>", note)
+    parts = re.split(r"(?<=[.!?])\s+", protected)
+    return [p.replace("<DOT>", ".").strip() for p in parts if p.strip()]
 
 
 def predict(note):
