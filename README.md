@@ -4,7 +4,7 @@
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tugbasahingunes/casenote-ai/blob/main/notebooks/run_in_colab.ipynb)
 
-> **Status: Phase 2 — prototype and evaluation harness.** Criteria, ethics framework, 12 labelled synthetic cases, the analysis code and the evaluation script are published. A keyword baseline has been scored; LLM results are next.
+> **Status: Phase 2 — prototype and first results.** Criteria, ethics framework, 12 labelled synthetic cases, the analysis code, an automated evaluation workflow and first LLM results are published.
 
 ---
 
@@ -58,7 +58,18 @@ It never diagnoses, scores people, or decides eligibility for services. Every ou
 
 ## First results
 
-A naive keyword baseline (no AI) misses **24%** of expert-flagged concerns, including every family-carer signal, and raises **11 harmful over-flags**, six of them in a case where nothing was wrong. It detects **none** of the said-vs-observed contradictions. This is the bar an AI system has to beat on both kinds of error at once. See [`eval/README.md`](eval/README.md).
+Twelve synthetic cases, scored against the expert labels. One run per system; a method demonstration, not a benchmark.
+
+| | Keyword baseline (no AI) | Gemini 3.1 Flash Lite |
+| --- | --- | --- |
+| Expert concerns missed | 10 of 45 (22%) | 8 of 45 (18%) |
+| of which flagged, but only as "record" | 0 | 6 |
+| Harmful over-flags | 11 | 1 |
+| Suspected financial abuse (C06) raised as urgent | yes | yes |
+| Said-vs-observed contradictions found | 0 of 5 | 4 of 5 |
+| Diagnostic labels used | 0 | 0 |
+
+**What this shows.** The model nearly eliminated harmful over-flagging and found most contradictions between what people said and what was observed. It avoided every designed trap: the locked door, the hearing aid, diagnostic language. Its misses had a pattern: in six cases it noticed the signal but rated it as "record" rather than "human review", mostly for service access, finances, housing and a fall. That mirrors what Finnish research reports about human documentation: social and economic needs tend to be given less weight. Details in [`eval/README.md`](eval/README.md).
 
 ## Ethics and compliance
 
@@ -82,8 +93,10 @@ casenote-ai/
 │   └── ethics.md            # ethics, EU AI Act, GDPR, DPIA draft
 ├── data/
 │   └── synthetic_cases/     # 12 synthetic notes + expert gold labels
+├── .github/workflows/
+│   └── evaluate.yml         # one-click evaluation on GitHub Actions
 ├── notebooks/
-│   └── run_in_colab.ipynb   # run the evaluation in the browser
+│   └── run_in_colab.ipynb   # alternative: run in the browser
 ├── src/
 │   ├── casenote.py          # note → evidence-quoted flags (Claude or Gemini + quote check)
 │   ├── run_cases.py         # run all cases
@@ -102,7 +115,8 @@ casenote-ai/
 - [x] Prototype: note → structured flags (Python + LLM API)
 - [x] Evaluation script: missed signals, harmful over-flagging, coverage gaps
 - [x] Keyword baseline scored ([results](eval/README.md))
-- [ ] LLM evaluation results
+- [x] First LLM evaluation (Gemini 3.1 Flash Lite)
+- [ ] Second model for comparison; prompt changes for under-rated domains
 - [ ] Simple interface and demo video
 - [ ] Review by practising social care professionals
 

@@ -1,0 +1,820 @@
+{
+  "C01": {
+    "person": [
+      {
+        "domain": 1,
+        "level": "record",
+        "quote": "He walks with a stick.",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 2,
+        "level": "human_review",
+        "quote": "Six medication boxes on the table from three different doctors; he was not sure which he still takes.",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 3,
+        "level": "human_review",
+        "quote": "He became tearful talking about his wife.",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 4,
+        "level": "human_review",
+        "quote": "His three children live in Helsinki and Tampere; last visit \"in midsummer.\"",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 5,
+        "level": "human_review",
+        "quote": "The fridge held milk, rye bread and a pot of soup he said was from Sunday (today is Wednesday).",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 8,
+        "level": "human_review",
+        "quote": "The roof over the back room leaks; two buckets on the floor, walls damp, a smell of mould.",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 8,
+        "level": "human_review",
+        "quote": "He heats only the kitchen with the wood stove and said the woodshed is \"half empty, but it will do.\"",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 9,
+        "level": "record",
+        "quote": "The bus to the village shop now runs twice a week.",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 11,
+        "level": "record",
+        "quote": "He said he does not need anything and will not move to \"a home.\"",
+        "source": "person_said"
+      },
+      {
+        "domain": 13,
+        "level": "record",
+        "quote": "A neighbour ploughs his yard in winter.",
+        "source": "professional_observed"
+      }
+    ],
+    "caregiver": [],
+    "young_carer": [],
+    "no_info": [
+      6,
+      7,
+      10,
+      12
+    ],
+    "said_vs_observed": [
+      {
+        "said": "He said he does not need anything",
+        "observed": [
+          "The roof over the back room leaks; two buckets on the floor, walls damp, a smell of mould.",
+          "Six medication boxes on the table from three different doctors; he was not sure which he still takes.",
+          "The fridge held milk, rye bread and a pot of soup he said was from Sunday (today is Wednesday)."
+        ]
+      }
+    ],
+    "removed_unverified_quotes": [],
+    "model": "gemini-3.1-flash-lite"
+  },
+  "C02": {
+    "person": [
+      {
+        "domain": 3,
+        "level": "human_review",
+        "quote": "she has slept \"three or four hours a night for about two weeks,\" has started two new writing projects and \"feels unusually full of energy.\"",
+        "source": "person_said"
+      },
+      {
+        "domain": 3,
+        "level": "record",
+        "quote": "keeping everything under control \"is exhausting.\"",
+        "source": "person_said"
+      },
+      {
+        "domain": 4,
+        "level": "record",
+        "quote": "Most of her friends have moved away or died.",
+        "source": "person_said"
+      },
+      {
+        "domain": 8,
+        "level": "record",
+        "quote": "The flat was tidy but cold; she keeps radiators low.",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 9,
+        "level": "record",
+        "quote": "\"I need to save money in case I need care one day.\" She buys discounted food and has cancelled subscriptions.",
+        "source": "person_said"
+      },
+      {
+        "domain": 11,
+        "level": "record",
+        "quote": "She asked for information on future care planning and power of attorney (edunvalvontavaltuutus).",
+        "source": "person_said"
+      },
+      {
+        "domain": 13,
+        "level": "record",
+        "quote": "She keeps a pill organiser and a mood diary.",
+        "source": "professional_observed"
+      }
+    ],
+    "caregiver": [],
+    "young_carer": [],
+    "no_info": [
+      1,
+      2,
+      5,
+      6,
+      7,
+      10,
+      12
+    ],
+    "said_vs_observed": [],
+    "removed_unverified_quotes": [],
+    "model": "gemini-3.1-flash-lite"
+  },
+  "C03": {
+    "person": [
+      {
+        "domain": 1,
+        "level": "record",
+        "quote": "Mrs. F (81) has been bedridden for three years after a stroke.",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 4,
+        "level": "record",
+        "quote": "She lives with her son's family.",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 9,
+        "level": "human_review",
+        "quote": "The family has not applied for informal care support (omaishoidon tuki); Mrs. S said \"we didn't know we could.\"",
+        "source": "relative_said"
+      },
+      {
+        "domain": 9,
+        "level": "human_review",
+        "quote": "She said they are \"two months behind on the electricity bill.\"",
+        "source": "relative_said"
+      },
+      {
+        "domain": 11,
+        "level": "human_review",
+        "quote": "It was not possible to speak with Mrs. F alone.",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 13,
+        "level": "record",
+        "quote": "Mrs. F was clean and her bed well kept.",
+        "source": "professional_observed"
+      }
+    ],
+    "caregiver": [
+      {
+        "area": "work_income_loss",
+        "level": "human_review",
+        "quote": "left her job as a cashier to do it"
+      },
+      {
+        "area": "care_burden_health",
+        "level": "human_review",
+        "quote": "Mrs. S turns Mrs. F twice a night and has had back pain for months."
+      },
+      {
+        "area": "social_isolation",
+        "level": "human_review",
+        "quote": "I haven't been out except to the shop in weeks."
+      }
+    ],
+    "young_carer": [
+      {
+        "area": "child_care_tasks",
+        "level": "human_review",
+        "quote": "he told me he has missed school \"a few times\" for this"
+      }
+    ],
+    "no_info": [
+      2,
+      3,
+      5,
+      6,
+      7,
+      8,
+      10,
+      12
+    ],
+    "said_vs_observed": [],
+    "removed_unverified_quotes": [],
+    "model": "gemini-3.1-flash-lite"
+  },
+  "C04": {
+    "person": [
+      {
+        "domain": 1,
+        "level": "record",
+        "quote": "He is physically strong and walks around the flat constantly.",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 2,
+        "level": "record",
+        "quote": "diagnosed with early-onset Alzheimer's disease at 58",
+        "source": "relative_said"
+      },
+      {
+        "domain": 4,
+        "level": "record",
+        "quote": "The couple's daughter lives abroad.",
+        "source": "relative_said"
+      },
+      {
+        "domain": 8,
+        "level": "human_review",
+        "quote": "He tried to leave at night twice last month; Mrs. N now locks the door and keeps the key on her.",
+        "source": "relative_said"
+      },
+      {
+        "domain": 13,
+        "level": "record",
+        "quote": "Mr. A was calm, friendly and recognised his wife.",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 11,
+        "level": "human_review",
+        "quote": "When day activity services were mentioned she said: 'He wouldn't go.'",
+        "source": "relative_said"
+      }
+    ],
+    "caregiver": [
+      {
+        "area": "care_burden_health",
+        "level": "human_review",
+        "quote": "She sleeps about four hours a night"
+      },
+      {
+        "area": "social_isolation",
+        "level": "human_review",
+        "quote": "She stopped going to her choir and no longer visits neighbours."
+      },
+      {
+        "area": "substance_use",
+        "level": "human_review",
+        "quote": "a glass or two of wine every evening now, otherwise I can't sleep."
+      },
+      {
+        "area": "own_view",
+        "level": "record",
+        "quote": "I can handle it, I always have."
+      },
+      {
+        "area": "psychological_wellbeing",
+        "level": "human_review",
+        "quote": "She said she sometimes cries in the bathroom 'so he doesn't see.'"
+      }
+    ],
+    "young_carer": [],
+    "no_info": [
+      3,
+      5,
+      6,
+      7,
+      9,
+      10,
+      12
+    ],
+    "said_vs_observed": [
+      {
+        "said": "I can handle it, I always have.",
+        "observed": [
+          "She sleeps about four hours a night",
+          "She stopped going to her choir and no longer visits neighbours.",
+          "she sometimes cries in the bathroom"
+        ]
+      }
+    ],
+    "removed_unverified_quotes": [],
+    "model": "gemini-3.1-flash-lite"
+  },
+  "C05": {
+    "person": [
+      {
+        "domain": 1,
+        "level": "record",
+        "quote": "Both walk daily with Nordic walking poles.",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 2,
+        "level": "record",
+        "quote": "She takes one blood-pressure tablet each morning and keeps it next to the coffee maker.",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 2,
+        "level": "record",
+        "quote": "She said she sometimes forgets names \"like everyone at my age\" and laughed.",
+        "source": "person_said"
+      },
+      {
+        "domain": 4,
+        "level": "record",
+        "quote": "She sings in a church choir and helps at the local library's reading circle. Their two children live in the same city and visit at weekends.",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 5,
+        "level": "record",
+        "quote": "They cook together; the fridge was well stocked.",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 6,
+        "level": "record",
+        "quote": "She wears reading glasses.",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 7,
+        "level": "record",
+        "quote": "They cook together",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 8,
+        "level": "record",
+        "quote": "They have a safety bracelet ordered \"just in case.\"",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 9,
+        "level": "human_review",
+        "quote": "wanted to know about the city's senior exercise groups.",
+        "source": "person_said"
+      },
+      {
+        "domain": 11,
+        "level": "record",
+        "quote": "She said they are content",
+        "source": "person_said"
+      },
+      {
+        "domain": 13,
+        "level": "record",
+        "quote": "She sings in a church choir and helps at the local library's reading circle.",
+        "source": "professional_observed"
+      }
+    ],
+    "caregiver": [],
+    "young_carer": [],
+    "no_info": [
+      3,
+      10,
+      12
+    ],
+    "said_vs_observed": [],
+    "removed_unverified_quotes": [],
+    "model": "gemini-3.1-flash-lite"
+  },
+  "C06": {
+    "person": [
+      {
+        "domain": 9,
+        "level": "human_review",
+        "quote": "pension \"doesn't stretch as far as it used to,\"",
+        "source": "person_said"
+      },
+      {
+        "domain": 5,
+        "level": "record",
+        "quote": "The fridge had little food.",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 12,
+        "level": "urgent_human_review",
+        "quote": "Her nephew R (45) \"helps with money\" and has her bank codes.",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 12,
+        "level": "urgent_human_review",
+        "quote": "she signed \"some papers at the bank\" but does not remember what they were.",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 12,
+        "level": "urgent_human_review",
+        "quote": "Mrs. H said quietly: \"Please don't tell him I said anything.\"",
+        "source": "person_said"
+      },
+      {
+        "domain": 11,
+        "level": "human_review",
+        "quote": "He was present for most of the visit and answered several questions for her.",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 13,
+        "level": "record",
+        "quote": "She attends a day centre on Tuesdays and enjoys it.",
+        "source": "person_said"
+      }
+    ],
+    "caregiver": [],
+    "young_carer": [],
+    "no_info": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8,
+      10
+    ],
+    "said_vs_observed": [
+      {
+        "said": "When he returned she said everything was fine.",
+        "observed": [
+          "Mrs. H said quietly: \"Please don't tell him I said anything.\""
+        ]
+      }
+    ],
+    "removed_unverified_quotes": [],
+    "model": "gemini-3.1-flash-lite"
+  },
+  "C07": {
+    "person": [
+      {
+        "domain": 2,
+        "level": "record",
+        "quote": "She takes four medications and keeps the boxes with Russian notes written by her daughter.",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 4,
+        "level": "human_review",
+        "quote": "she is \"lonely on weekdays\"",
+        "source": "person_said"
+      },
+      {
+        "domain": 6,
+        "level": "human_review",
+        "quote": "She speaks Russian and very little Finnish. Her granddaughter (17) interpreted during the visit.",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 9,
+        "level": "human_review",
+        "quote": "She missed a cardiology follow-up because the letter was in Finnish.",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 11,
+        "level": "human_review",
+        "quote": "would like a Russian-speaking doctor",
+        "source": "person_said"
+      },
+      {
+        "domain": 11,
+        "level": "human_review",
+        "quote": "It was not possible to talk without the granddaughter.",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 13,
+        "level": "record",
+        "quote": "She attends a Russian-language church group on Sundays.",
+        "source": "professional_observed"
+      }
+    ],
+    "caregiver": [],
+    "young_carer": [],
+    "no_info": [
+      1,
+      3,
+      5,
+      7,
+      8,
+      10,
+      12
+    ],
+    "said_vs_observed": [],
+    "removed_unverified_quotes": [
+      {
+        "domain": 9,
+        "level": "human_review",
+        "quote": "She has no online banking codes and cannot use digital health services",
+        "source": "professional_observed"
+      }
+    ],
+    "model": "gemini-3.1-flash-lite"
+  },
+  "C08": {
+    "person": [
+      {
+        "domain": 1,
+        "level": "human_review",
+        "quote": "He fell in the bathroom two weeks ago and has a bruise on his forehead; he did not seek care.",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 2,
+        "level": "record",
+        "quote": "He takes sleeping pills prescribed last year.",
+        "source": "person_said"
+      },
+      {
+        "domain": 3,
+        "level": "human_review",
+        "quote": "He said the days feel empty since he retired",
+        "source": "person_said"
+      },
+      {
+        "domain": 4,
+        "level": "human_review",
+        "quote": "\"doesn't really talk to anyone except the cashier.\"",
+        "source": "person_said"
+      },
+      {
+        "domain": 10,
+        "level": "human_review",
+        "quote": "Several empty bottles were in the kitchen recycling. He said he \"has a few beers in the evening, like everyone.\"",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 13,
+        "level": "record",
+        "quote": "He is good with computers and repairs neighbours' laptops occasionally.",
+        "source": "professional_observed"
+      }
+    ],
+    "caregiver": [],
+    "young_carer": [],
+    "no_info": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      11,
+      12
+    ],
+    "said_vs_observed": [],
+    "removed_unverified_quotes": [],
+    "model": "gemini-3.1-flash-lite"
+  },
+  "C09": {
+    "person": [
+      {
+        "domain": 6,
+        "level": "human_review",
+        "quote": "Her hearing aid was in a drawer: \"the battery died in the summer and I didn't know where to get new ones.\"",
+        "source": "person_said"
+      },
+      {
+        "domain": 4,
+        "level": "human_review",
+        "quote": "She has stopped attending the building's coffee mornings because \"I can't follow the conversation.\"",
+        "source": "person_said"
+      },
+      {
+        "domain": 2,
+        "level": "record",
+        "quote": "She manages her own medication with a dosette box filled by the pharmacy.",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 13,
+        "level": "record",
+        "quote": "When I sat close and spoke slowly facing her, her answers were clear and detailed; she named all her grandchildren and their cities.",
+        "source": "professional_observed"
+      }
+    ],
+    "caregiver": [],
+    "young_carer": [],
+    "no_info": [
+      1,
+      3,
+      5,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "said_vs_observed": [
+      {
+        "said": "She often answered a different question from the one asked and asked me to repeat several times.",
+        "observed": [
+          "When I sat close and spoke slowly facing her, her answers were clear and detailed"
+        ]
+      }
+    ],
+    "removed_unverified_quotes": [],
+    "model": "gemini-3.1-flash-lite"
+  },
+  "C10": {
+    "person": [
+      {
+        "domain": 1,
+        "level": "human_review",
+        "quote": "Says the stairs to the sauna are \"getting tricky.\"",
+        "source": "person_said"
+      },
+      {
+        "domain": 4,
+        "level": "human_review",
+        "quote": "At the door said \"it's quiet in the evenings now.\"",
+        "source": "person_said"
+      },
+      {
+        "domain": 6,
+        "level": "human_review",
+        "quote": "nurses mostly speak Finnish, he understands \"some\" but says he \"doesn't ask anything, it's easier.\"",
+        "source": "person_said"
+      },
+      {
+        "domain": 7,
+        "level": "record",
+        "quote": "Garden overgrown, he used to keep it.",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 9,
+        "level": "human_review",
+        "quote": "He asked whether there is any Swedish-speaking group for men.",
+        "source": "person_said"
+      },
+      {
+        "domain": 11,
+        "level": "record",
+        "quote": "He asked whether there is any Swedish-speaking group for men.",
+        "source": "person_said"
+      },
+      {
+        "domain": 13,
+        "level": "record",
+        "quote": "Talked a lot about his years as a ferry captain, photos everywhere.",
+        "source": "professional_observed"
+      }
+    ],
+    "caregiver": [],
+    "young_carer": [],
+    "no_info": [
+      2,
+      3,
+      5,
+      8,
+      10,
+      12
+    ],
+    "said_vs_observed": [],
+    "removed_unverified_quotes": [],
+    "model": "gemini-3.1-flash-lite"
+  },
+  "C11": {
+    "person": [
+      {
+        "domain": 1,
+        "level": "human_review",
+        "quote": "He had a fall in the yard in April; no fracture, but he now uses a walker indoors",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 4,
+        "level": "human_review",
+        "quote": "has not been to the village coffee shop since",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 5,
+        "level": "human_review",
+        "quote": "He has lost weight; trousers held up with a belt notched tighter",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 11,
+        "level": "record",
+        "quote": "I'm fine, I don't need more help.",
+        "source": "person_said"
+      },
+      {
+        "domain": 13,
+        "level": "record",
+        "quote": "The roof was repaired in March through the municipal housing repair grant.",
+        "source": "professional_observed"
+      }
+    ],
+    "caregiver": [],
+    "young_carer": [],
+    "no_info": [
+      2,
+      3,
+      6,
+      7,
+      8,
+      9,
+      10,
+      12
+    ],
+    "said_vs_observed": [
+      {
+        "said": "I'm fine, I don't need more help.",
+        "observed": [
+          "He has lost weight; trousers held up with a belt notched tighter",
+          "He had a fall in the yard in April; no fracture, but he now uses a walker indoors",
+          "has not been to the village coffee shop since"
+        ]
+      }
+    ],
+    "removed_unverified_quotes": [],
+    "model": "gemini-3.1-flash-lite"
+  },
+  "C12": {
+    "person": [
+      {
+        "domain": 1,
+        "level": "record",
+        "quote": "she fell in the kitchen last winter and waited until the neighbour came",
+        "source": "person_said"
+      },
+      {
+        "domain": 2,
+        "level": "human_review",
+        "quote": "she can no longer read the medication labels",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 4,
+        "level": "record",
+        "quote": "lives alone in a village",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 6,
+        "level": "human_review",
+        "quote": "Her eyesight has worsened and she can no longer read the medication labels",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 8,
+        "level": "human_review",
+        "quote": "she has a safety phone but said she \"doesn't like to bother anyone\" and has never pressed it",
+        "source": "person_said"
+      },
+      {
+        "domain": 8,
+        "level": "record",
+        "quote": "The road is not ploughed until late morning after snowfall",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 9,
+        "level": "record",
+        "quote": "lives alone in a village 120 km from the nearest town",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 13,
+        "level": "record",
+        "quote": "She bakes for the village and knits for her great-grandchildren",
+        "source": "professional_observed"
+      },
+      {
+        "domain": 13,
+        "level": "record",
+        "quote": "on other days a neighbour checks on her each morning",
+        "source": "professional_observed"
+      }
+    ],
+    "caregiver": [],
+    "young_carer": [],
+    "no_info": [
+      3,
+      5,
+      7,
+      10,
+      11,
+      12
+    ],
+    "said_vs_observed": [],
+    "removed_unverified_quotes": [],
+    "model": "gemini-3.1-flash-lite"
+  }
+}

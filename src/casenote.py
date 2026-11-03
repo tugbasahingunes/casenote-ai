@@ -110,8 +110,17 @@ Rules:
 Return your answer only by calling the record_flags tool."""
 
 
+QUOTE_MARKS = "\"'‘’“”"
+
+
 def _norm(text):
-    text = text.replace("’", "'").replace("“", '"').replace("”", '"')
+    """Lower-case, collapse spaces and drop quotation marks.
+
+    Models often swap double for single quotes when quoting a sentence that
+    itself contains a quotation. That is a formatting difference, not an
+    invented quote, so quotation marks are ignored in the comparison.
+    """
+    text = text.translate({ord(c): None for c in QUOTE_MARKS})
     return re.sub(r"\s+", " ", text).strip().lower()
 
 
@@ -119,7 +128,7 @@ def quote_in_note(quote, note):
     """True if the quote (or each part split by '...') appears in the note."""
     parts = [p for p in re.split(r"\.\.\.|…", quote) if p.strip()]
     n = _norm(note)
-    return bool(parts) and all(_norm(p).strip(" \"'") in n for p in parts)
+    return bool(parts) and all(_norm(p) in n for p in parts)
 
 
 def verify_quotes(result, note):
@@ -198,7 +207,7 @@ def _call_gemini(note, criteria, model, client=None):
 
 PROVIDERS = {
     "anthropic": (_call_anthropic, "claude-sonnet-5-5"),
-    "gemini": (_call_gemini, "gemini-3.8-flash"),
+    "gemini": (_call_gemini, "gemini-3.1-flash-lite"),
 }
 
 

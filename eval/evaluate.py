@@ -41,11 +41,25 @@ def free_text(obj, skip="quote"):
     return obj if isinstance(obj, str) else ""
 
 
+def accepted_alternatives(gold):
+    """(subject, domain) -> other domains the expert also accepts for that signal."""
+    return {("person", f["domain"]): {("person", a) for a in f.get("accept", [])}
+            for f in gold.get("person", []) if f.get("accept")}
+
+
 def evaluate_case(gold, pred):
     g, p = all_levels(gold), all_levels(pred)
+    alts = accepted_alternatives(gold)
+
+    def best(k):
+        """Highest level the system gave this signal, in its domain or an accepted one."""
+        return max([p.get(k, -1)] + [p.get(a, -1) for a in alts.get(k, ())])
+
     concerns = [k for k, lv in g.items() if lv >= 1]
-    missed = [k for k in concerns if p.get(k, -1) < 1]
-    under = [k for k, lv in g.items() if lv == 2 and p.get(k, -1) == 1]
+    missed = [k for k in concerns if best(k) < 1]
+    seen_low = [k for k in missed if best(k) == 0]      # flagged, but only as "record"
+    not_seen = [k for k in missed if best(k) == -1]     # not flagged at all
+    under = [k for k, lv in g.items() if lv == 2 and best(k) == 1]
 
     traps = set(gold.get("overflag_traps", []))
     harmful = [k for k, lv in p.items() if k[0] == "person" and k[1] in traps and lv >= 1]
@@ -54,7 +68,9 @@ def evaluate_case(gold, pred):
     text = free_text(pred).lower()
     labels = [t for t in gold.get("forbidden_terms", []) if t in text]
 
-    extra = [k for k, lv in p.items() if lv >= 1 and g.get(k, -1) < 1 and k not in harmful]
+    covered = set(concerns) | {a for k in concerns for a in alts.get(k, ())}
+    extra = [k for k, lv in p.items() if lv >= 1 and k not in covered and g.get(k, -1) < 1
+             and k not in harmful]
 
     gold_gap, pred_gap = set(gold.get("no_info", [])), set(pred.get("no_info", []))
     total_quotes = sum(len(pred.get(s, [])) for s in ("person", "caregiver", "young_carer"))
@@ -63,6 +79,8 @@ def evaluate_case(gold, pred):
     return {
         "concerns": len(concerns),
         "missed": missed,
+        "seen_low": seen_low,
+        "not_seen": not_seen,
         "under_escalated": under,
         "harmful_overflags": harmful,
         "diagnostic_labels": labels,
@@ -102,6 +120,8 @@ def main(pred_path):
         f"# Evaluation report: `{name}`", "",
         "| Metric | Result | What it means |", "| --- | --- | --- |",
         f"| Missed signals | {missed} of {concerns} ({missed / concerns:.0%}) | Expert-flagged concerns the system did not raise to review |",
+        f"| \u2003of which flagged only as record | {s('seen_low')} | Seen, but judged not to need review |",
+        f"| \u2003of which not flagged at all | {s('not_seen')} | Not noticed |",
         f"| Domain 12 (abuse/neglect) missed | {s('d12_missed')} of {s('d12_gold')} | The most serious miss |",
         f"| Under-escalated | {s('under_escalated')} | Urgent cases raised only to normal review |",
         f"| Harmful over-flagging | {s('harmful_overflags')} | Flags on domains the expert marked as traps |",
@@ -113,10 +133,13 @@ def main(pred_path):
         "", "## Per case", "",
         "| Case | Missed | Under-escalated | Harmful over-flags | Extra |", "| --- | --- | --- | --- | --- |",
     ]
+    footnote = "\n\"(record)\" = the system flagged the signal but only at record level, not for review.\n"
     for cid, r in rows.items():
-        lines.append(f"| {cid} | {fmt(r['missed'])} | {fmt(r['under_escalated'])} | "
+        missed_txt = ", ".join(
+            [fmt([k]) + " (record)" for k in r["seen_low"]] + [fmt([k]) for k in r["not_seen"]]) or "–"
+        lines.append(f"| {cid} | {missed_txt} | {fmt(r['under_escalated'])} | "
                      f"{fmt(r['harmful_overflags'])}{' ' + str(r['diagnostic_labels']) if r['diagnostic_labels'] else ''} | {fmt(r['extra_flags'])} |")
-    report = "\n".join(lines) + "\n"
+    report = "\n".join(lines) + "\n" + footnote
     out = ROOT / f"eval/results/report_{name}.md"
     out.write_text(report, encoding="utf-8")
     print(report)

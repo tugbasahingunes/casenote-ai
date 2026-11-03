@@ -1,5 +1,5 @@
 {
-  "version": "2.0",
+  "version": "2.1",
   "levels": [
     "record",
     "human_review",
@@ -406,7 +406,10 @@
         {
           "domain": 1,
           "level": "human_review",
-          "evidence": "He fell in the bathroom two weeks ago"
+          "evidence": "He fell in the bathroom two weeks ago",
+          "accept": [
+            8
+          ]
         },
         {
           "domain": 2,
@@ -494,7 +497,10 @@
         {
           "domain": 6,
           "level": "human_review",
-          "evidence": "nurses mostly speak Finnish"
+          "evidence": "nurses mostly speak Finnish",
+          "accept": [
+            9
+          ]
         },
         {
           "domain": 3,
@@ -504,7 +510,10 @@
         {
           "domain": 8,
           "level": "human_review",
-          "evidence": "the stairs to the sauna are \"getting tricky.\""
+          "evidence": "the stairs to the sauna are \"getting tricky.\"",
+          "accept": [
+            1
+          ]
         },
         {
           "domain": 7,
@@ -563,7 +572,10 @@
         {
           "domain": 4,
           "level": "human_review",
-          "evidence": "has not been to the village coffee shop since"
+          "evidence": "has not been to the village coffee shop since",
+          "accept": [
+            13
+          ]
         },
         {
           "domain": 5,
@@ -617,7 +629,10 @@
         {
           "domain": 6,
           "level": "human_review",
-          "evidence": "can no longer read the medication labels"
+          "evidence": "can no longer read the medication labels",
+          "accept": [
+            2
+          ]
         },
         {
           "domain": 9,
@@ -654,5 +669,8 @@
         12
       ]
     }
+  ],
+  "changelog": [
+    "2.1: added 'accept' alternatives for flags that cases.md already listed under two domains (e.g. '1 / 8'). No labels or levels changed."
   ]
 }
